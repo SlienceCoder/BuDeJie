@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JGTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 创建窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    // 设置窗口主控制器
+    JGTabBarViewController *vc = [[JGTabBarViewController alloc] init];
+    self.window.rootViewController = vc;
+    
+    // 设置主窗口并显示
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
